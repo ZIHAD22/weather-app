@@ -11,8 +11,9 @@ const fetching = async (url) => {
 const searchResult = async () => {
   toggle('spinner', 'block', 'd-none')
   toggle('weather', 'none')
-  const city = document.getElementById('city').value
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+  const city = document.getElementById('city')
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${API_KEY}`
+  city.value = ''
   const searchingResult = await fetching(url)
   displayData(searchingResult)
   toggle('spinner', 'none')

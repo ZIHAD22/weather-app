@@ -24,8 +24,10 @@ const displayData = (data) => {
     main: { temp },
   } = data
   const main = data.weather.map((e) => e.main)
+  const icon = data.weather.map((e) => e.icon)
+  console.log(main, icon)
   div.innerHTML = `
-  
+        <img width="100px" src="https://openweathermap.org/img/wn/${icon}.png" alt="" />
         <h1>${name}</h1>
         <h3><span>${(temp - 273.15).toFixed(2)}</span>&deg;C</h3>
         <h1 class="lead">${main}</h1>

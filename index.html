@@ -44,7 +44,17 @@
           </div>
         </div>
       </form>
-      <div id="weather" class="weather-status text-white text-center"></div>
+      <div class="weather-status text-white text-center">
+        <div id="spinner" class="d-none">
+          <div
+            class="spinner-grow text-light"
+            style="width: 3rem; height: 3rem"
+            role="status"
+          ></div>
+          <h3>loading...</h3>
+        </div>
+        <div id="weather"></div>
+      </div>
     </div>
 
     <script src="./js/index.js"></script>

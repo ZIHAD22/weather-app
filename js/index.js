@@ -34,7 +34,7 @@ const displayData = (data) => {
     const div = document.createElement('div')
     div.innerHTML = `
     
-        <h2>${data.message}</h2>
+        <h2>${data.message.toUpperCase()}</h2>
     
     `
     displayWeather.appendChild(div)
